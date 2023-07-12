@@ -9,7 +9,7 @@ import { LuFileCode, LuPlay } from "react-icons/lu";
 const Projects = () => {
 	return (
 		<div className="mb-40 text-sm">
-			<h1 className="pl-4 text-base text-red-400 border-l-4 border-red-400">
+			<h1 className="pl-4 text-base text-green-400 border-l-4 border-red-400">
 				projects
 			</h1>
 

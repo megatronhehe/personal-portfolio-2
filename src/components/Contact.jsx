@@ -14,17 +14,17 @@ import { VscMail } from "react-icons/vsc";
 
 const Contact = () => {
 	return (
-		<div className="text-sm mb-40">
-			<h1 className="text-base border-l-4 border-red-400 pl-4 text-red-400">
+		<div className="mb-40 text-sm">
+			<h1 className="pl-4 text-base text-purple-400 border-l-4 border-purple-400">
 				Contact
 			</h1>
 
-			<p className="bg-gray-700 text-gray-300 p-4 my-4 rounded-xl">
+			<p className="p-4 my-4 text-gray-300 bg-gray-700 rounded-xl">
 				You can reach me in various ways below:
 			</p>
 
-			<div className="sm:flex justify-around">
-				<div className="text-blue-400 mb-4">
+			<div className="justify-around sm:flex">
+				<div className="px-2 mb-4 text-purple-400 border-l-2 border-purple-400">
 					<p className="font-semibold">General Contact</p>
 					<ul className="">
 						<li className="flex items-center gap-2">
@@ -38,7 +38,7 @@ const Contact = () => {
 					</ul>
 				</div>
 
-				<div className="text-red-400">
+				<div className="px-2 text-purple-400 border-l-2 border-purple-400">
 					<p className="font-semibold">Social Media</p>
 					<ul className="">
 						<li className="flex items-center gap-2">

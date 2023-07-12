@@ -12,11 +12,13 @@ const ProjectCard = ({ title, description }) => {
 			</div>
 
 			<div>
-				<h1 className="mt-4 text-base text-red-400 ">{title}</h1>
+				<h1 className="my-3 text-base font-semibold text-green-400 ">
+					{title}
+				</h1>
 				<p className="text-gray-300">{description}</p>
 			</div>
 
-			<div className="mt-4 text-red-400">
+			<div className="mt-4 text-green-400">
 				<p>Technologies Used : </p>
 				<ul className="flex gap-2 mt-2">
 					<li className="p-2 bg-gray-800 rounded-lg">React JS</li>
@@ -25,10 +27,10 @@ const ProjectCard = ({ title, description }) => {
 			</div>
 
 			<ul className="absolute flex gap-2 p-2 text-2xl bg-gray-700 top-2 left-2 rounded-xl">
-				<li className="p-2 bg-red-400 rounded-xl">
+				<li className="p-2 bg-green-400 rounded-md">
 					<LuPlay />
 				</li>
-				<li className="p-2 bg-red-400 rounded-xl">
+				<li className="p-2 bg-green-400 rounded-md">
 					<LuFileCode />
 				</li>
 			</ul>

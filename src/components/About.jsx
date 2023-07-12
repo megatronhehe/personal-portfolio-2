@@ -26,7 +26,7 @@ const About = () => {
 
 	return (
 		<div className="mb-40 text-sm">
-			<h1 className="pl-4 text-base text-red-400 border-l-4 border-red-400">
+			<h1 className="pl-4 text-base text-blue-400 border-l-4 border-blue-400">
 				about
 			</h1>
 			<div className="p-4 my-4 text-gray-300 bg-gray-700 rounded-xl">
@@ -51,24 +51,24 @@ const About = () => {
 			</div>
 
 			<div className="gap-4 sm:flex">
-				<div className="flex flex-col justify-between h-48 py-1 mb-4 bg-blue-400 sm:w-1/2 rounded-xl">
-					<h2 className="flex items-center justify-center gap-2 text-base font-semibold">
+				<div className="flex flex-col justify-between h-48 py-1 mb-4 text-blue-400 bg-gray-700 sm:w-1/2 rounded-xl">
+					<h2 className="flex items-center justify-center gap-2 mt-2 text-base font-semibold">
 						<PiAddressBookBold />
 						Biodata
 					</h2>
-					<div className="justify-between text-blue-400">
+					<div className="justify-between ">
 						<ul className="px-2 ">
-							<li className="flex items-center gap-2 p-2 my-2 bg-gray-700 rounded-md">
+							<li className="flex items-center gap-2 p-2 my-2 bg-gray-800 rounded-md">
 								<PiPersonArmsSpreadFill />
 								Ida Bagus Satya Mahendra
 							</li>
-							<li className="flex items-center gap-2 p-2 mt-2 bg-gray-700 rounded-md">
+							<li className="flex items-center gap-2 p-2 mt-2 bg-gray-800 rounded-md">
 								<PiMapPinFill />
 								Malang, East Java
 							</li>
 							<li className="flex items-center gap-2 rounded-md">
-								<p className="p-2 my-2 bg-gray-700 rounded-lg">Interest </p>
-								<div className="flex w-full gap-2 p-2 my-2 text-2xl bg-gray-700 rounded-lg">
+								<p className="p-2 my-2 bg-gray-800 rounded-lg">Interest </p>
+								<div className="flex w-full gap-2 p-2 my-2 text-2xl bg-gray-800 rounded-lg">
 									<PiCodeFill />
 
 									<PiGameControllerFill
@@ -91,12 +91,12 @@ const About = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col justify-between h-48 py-1 bg-red-400 sm:w-1/2 rounded-xl">
-					<h2 className="flex items-center justify-center gap-2 text-base font-semibold">
+				<div className="flex flex-col justify-between h-48 py-1 bg-blue-400 sm:w-1/2 rounded-xl">
+					<h2 className="flex items-center justify-center gap-2 mt-2 text-base font-semibold">
 						<PiCubeBold />
 						Tech stacks
 					</h2>
-					<div className="flex justify-between gap-2 text-red-400">
+					<div className="flex justify-between gap-2 text-blue-400 ">
 						<ul className="w-1/2 pl-2">
 							<li className="flex items-center gap-2 p-2 my-2 bg-gray-700 rounded-md">
 								<SiHtml5 />
