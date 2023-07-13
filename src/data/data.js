@@ -38,4 +38,9 @@ export const quotesData = [
 		quote: "If failure makes you stronger, you can never lose.",
 		by: "A. Tate",
 	},
+	{
+		id: 6,
+		quote: "silitul babingingul",
+		by: "lelanjangan",
+	},
 ];

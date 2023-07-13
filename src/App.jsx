@@ -21,11 +21,25 @@ function App() {
 
 				<div className="flex flex-col items-center justify-center">
 					<div className="w-full max-w-4xl">
-						<Home />
-						<About />
-						<Projects />
-						<Contact />
-						<Footer />
+						<div id="home">
+							<Home />
+						</div>
+
+						<div id="about">
+							<About />
+						</div>
+
+						<div id="projects">
+							<Projects />
+						</div>
+
+						<div id="contact">
+							<Contact />
+						</div>
+
+						<div id="footer">
+							<Footer />
+						</div>
 					</div>
 				</div>
 			</div>

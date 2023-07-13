@@ -21,7 +21,7 @@ const Footer = () => {
 			<PiDiamondsFourFill onClick={getRandomQuote} />
 			<div>
 				<p>{quote.quote}</p>
-				<p className="text-center">{quote.by}</p>
+				<p className="text-center">- {quote.by}</p>
 			</div>
 			<p className="pt-4 text-gray-600 border-t border-gray-600">
 				made with love by satya, not really.. but mostly with fingers{" "}
