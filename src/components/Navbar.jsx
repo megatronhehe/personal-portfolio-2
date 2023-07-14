@@ -29,45 +29,45 @@ const Navbar = () => {
 			</button>
 			{toggle && (
 				<ul className="flex flex-col items-center gap-12 py-4 mt-2 text-center bg-gray-700 opacity-90 rounded-xl">
-					<button className="flex flex-col items-center text-base text-gray-500">
+					<li className="flex flex-col items-center text-base text-gray-500">
 						<PiDiamondsFourFill />
-					</button>
+					</li>
 
-					<button
+					<li
 						onClick={() => handleClickScroll("home")}
 						className="flex flex-col items-center"
 					>
 						<VscHome />
 						<p className="text-xs">home</p>
-					</button>
+					</li>
 
-					<button
+					<li
 						onClick={() => handleClickScroll("about")}
 						className="flex flex-col items-center text-blue-400"
 					>
 						<VscAccount />
 						<p className="text-xs">about</p>
-					</button>
+					</li>
 
-					<button
+					<li
 						onClick={() => handleClickScroll("projects")}
 						className="flex flex-col items-center text-green-400"
 					>
 						<VscLayers />
 						<p className="text-xs">projects</p>
-					</button>
+					</li>
 
-					<button
+					<li
 						onClick={() => handleClickScroll("contact")}
 						className="flex flex-col items-center text-purple-400"
 					>
 						<VscMail />
 						<p className="text-xs">contact</p>
-					</button>
+					</li>
 
-					<button className="flex flex-col items-center text-base text-gray-500">
+					<li className="flex flex-col items-center text-base text-gray-500">
 						<PiDiamondsFourFill />
-					</button>
+					</li>
 				</ul>
 			)}
 		</div>
