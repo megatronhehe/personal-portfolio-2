@@ -14,7 +14,7 @@ import { VscMail } from "react-icons/vsc";
 
 const Contact = () => {
 	return (
-		<div className="mb-40 text-sm">
+		<div className="my-40 sm:h-screen sm:flex sm:flex-col sm:justify-center text-sm">
 			<h1 className="pl-4 text-base text-purple-400 border-l-4 border-purple-400">
 				Contact
 			</h1>
