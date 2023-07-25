@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 
-import defaultImg from "../assets/default-img.png";
-import defaultImg2 from "../assets/default2-img.png";
-import defaultImg3 from "../assets/default3-img.png";
-
 import { LuFileCode, LuPlay } from "react-icons/lu";
 
-const ProjectCard = ({ title, description }) => {
-	const imageArray = [defaultImg, defaultImg2, defaultImg3];
+const ProjectCard = ({ title, description, image }) => {
+	const imageArray = image;
 
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -25,7 +21,7 @@ const ProjectCard = ({ title, description }) => {
 
 	return (
 		<div className="w-full gap-4 pb-8 my-8 text-gray-700 border-b border-gray-500 sm:flex">
-			<div className="relative flex flex-col items-center justify-center sm:w-1/2">
+			<div className="relative flex flex-col items-center justify-center sm:w-2/4">
 				<img
 					src={imageArray[currentImageIndex]}
 					alt=""
@@ -40,7 +36,7 @@ const ProjectCard = ({ title, description }) => {
 				</div>
 			</div>
 
-			<div className="relative flex flex-col justify-center py-4 sm:p-8 sm:w-2/3 rounded-xl">
+			<div className="relative flex flex-col justify-center py-4 sm:p-8 sm:w-2/4 rounded-xl">
 				<h1 className="my-3 text-base font-semibold text-green-400 ">
 					{title}
 				</h1>

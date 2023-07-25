@@ -1,8 +1,19 @@
 import React from "react";
 
+import { projectData } from "../data/projectData";
+
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+	const projectCardElement = projectData.map((project) => (
+		<ProjectCard
+			key={project.id}
+			title={project.title}
+			description={project.description}
+			image={project.image}
+		/>
+	));
+
 	return (
 		<div className="py-4 my-40 text-sm ">
 			<div>
@@ -18,26 +29,7 @@ const Projects = () => {
 				</div>
 			</div>
 
-			<div>
-				<ProjectCard
-					title="E-Commerce Clothing Website"
-					description="An online clothing online shop complete with most of the actual online shop functionality like cart systems, ability to choose and pick color, and more."
-				/>
-
-				<ProjectCard
-					title="Restaurant Ordering Panel App"
-					description="An app to help restaurant operator to deal with customer orders,
-					complete functionality to CRUD a customer order, and count price
-					total of each order."
-				/>
-
-				<ProjectCard
-					title="MeWatchThings App"
-					description="An app to keep track of what movies or shows you have or have not
-					watched yet. Hooked up with IMDB API, to give user the ability to
-					search every movies and shows that exist in the world."
-				/>
-			</div>
+			<div>{projectCardElement}</div>
 		</div>
 	);
 };

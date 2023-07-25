@@ -10,9 +10,9 @@ import {
 
 const Home = () => {
 	return (
-		<div className="my-40 sm:h-screen sm:flex sm:items-center text-2xl text-red-400 sm:gap-4">
+		<div className="my-40 text-2xl text-red-400 sm:m-0 sm:h-screen sm:flex sm:items-center sm:gap-4">
 			<div className="sm:w-1/3">
-				<h1 className="ml-20 sm:ml-0 text-base text-gray-400">Hi, I'm</h1>
+				<h1 className="ml-20 text-base text-gray-400 sm:ml-0">Hi, I'm</h1>
 				<div className="w-full p-4 my-4 bg-gray-700 border-l-4 border-red-400 rounded-r-xl">
 					<h1 className="tracking-wide">Satya Mahendra</h1>
 					<div className="flex items-center justify-center gap-2 text-sm text-blue-400">
