@@ -25,17 +25,17 @@ const ProjectCard = ({ title, description, image }) => {
 	};
 
 	return (
-		<div className="w-full gap-4 pb-8 my-8 text-gray-700 border-b border-gray-500 sm:flex">
+		<div className="w-full gap-4 pb-16 my-16 text-gray-700 border-b border-gray-500 sm:h-80 sm:flex">
 			<div className="relative flex flex-col items-center justify-center sm:w-2/4">
 				<img
 					src={imageArray[currentImageIndex]}
 					alt=""
-					className="rounded-2xl"
+					className="w-full h-80 rounded-2xl"
 				/>
 				<div className="absolute bottom-0 flex justify-between w-full h-full gap-4 p-2 text-xl text-white">
 					<button
 						onClick={prevImage}
-						className="text-2xl bg-gray-600 bg-opacity-50 rounded-full hover:bg-opacity-70"
+						className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
 					>
 						<LuChevronLeft />
 					</button>
@@ -44,7 +44,7 @@ const ProjectCard = ({ title, description, image }) => {
 					</p>
 					<button
 						onClick={nextImage}
-						className="text-2xl bg-gray-600 bg-opacity-50 rounded-full hover:bg-opacity-70"
+						className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
 					>
 						<LuChevronRight />
 					</button>
