@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-import { LuFileCode, LuPlay } from "react-icons/lu";
+import {
+	LuFileCode,
+	LuPlay,
+	LuChevronLeft,
+	LuChevronRight,
+} from "react-icons/lu";
 
 const ProjectCard = ({ title, description, image }) => {
 	const imageArray = image;
@@ -27,12 +32,22 @@ const ProjectCard = ({ title, description, image }) => {
 					alt=""
 					className="rounded-2xl"
 				/>
-				<div className="absolute bottom-0 flex justify-between w-full h-full gap-4 p-2 text-xl">
-					<button onClick={prevImage}>{"<"}</button>
-					<p className="self-end text-sm">
+				<div className="absolute bottom-0 flex justify-between w-full h-full gap-4 p-2 text-xl text-white">
+					<button
+						onClick={prevImage}
+						className="text-2xl bg-gray-600 bg-opacity-50 rounded-full hover:bg-opacity-70"
+					>
+						<LuChevronLeft />
+					</button>
+					<p className="self-end px-4 py-1 text-xs font-semibold tracking-widest bg-gray-500 bg-opacity-50 rounded-full shadow-lg">
 						{currentImageIndex + 1}/{imageArray.length}
 					</p>
-					<button onClick={nextImage}>{">"}</button>
+					<button
+						onClick={nextImage}
+						className="text-2xl bg-gray-600 bg-opacity-50 rounded-full hover:bg-opacity-70"
+					>
+						<LuChevronRight />
+					</button>
 				</div>
 			</div>
 
