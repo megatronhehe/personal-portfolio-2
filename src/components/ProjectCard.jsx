@@ -8,19 +8,18 @@ import {
 } from "react-icons/lu";
 
 const ProjectCard = ({ title, description, image }) => {
-	const imageArray = image;
-
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+	const imageArray = image;
 	const nextImage = () => {
 		setCurrentImageIndex((prev) =>
-			prev !== imageArray.length - 1 ? prev + 1 : setCurrentImageIndex(0)
+			prev !== imageArray.length - 1 ? prev + 1 : 0
 		);
 	};
 
 	const prevImage = () => {
 		setCurrentImageIndex((prev) =>
-			prev > 0 ? prev - 1 : setCurrentImageIndex(imageArray.length - 1)
+			prev > 0 ? prev - 1 : imageArray.length - 1
 		);
 	};
 
@@ -30,7 +29,7 @@ const ProjectCard = ({ title, description, image }) => {
 				<img
 					src={imageArray[currentImageIndex]}
 					alt=""
-					className="w-full h-80 rounded-2xl"
+					className="object-contain w-full h-80 rounded-2xl"
 				/>
 				<div className="absolute bottom-0 flex justify-between w-full h-full gap-4 p-2 text-xl text-white">
 					<button
