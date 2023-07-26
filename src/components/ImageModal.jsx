@@ -22,15 +22,15 @@ const ImageModal = ({ setToggleModal, image }) => {
 	return (
 		<div
 			onClick={() => setToggleModal(false)}
-			className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-gray-800 bg-opacity-50 sm:p-24"
+			className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-opacity-50 sm:p-24 backdrop-filter backdrop-blur-sm"
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}
 				className="relative flex items-center justify-center"
 			>
-				<div>
+				<div className="">
 					<img
-						className="object-contain"
+						className="object-contain "
 						src={imageArray[currentImageIndex]}
 						alt=""
 					/>
@@ -43,7 +43,7 @@ const ImageModal = ({ setToggleModal, image }) => {
 					>
 						<LuChevronLeft />
 					</button>
-					<p className="self-end px-4 py-1 text-xs font-semibold tracking-widest bg-gray-500 bg-opacity-50 rounded-full shadow-lg">
+					<p className="self-end w-24 px-4 py-1 text-xs font-semibold tracking-widest text-center bg-gray-500 bg-opacity-50 rounded-full shadow-lg">
 						{currentImageIndex + 1}/{imageArray.length}
 					</p>
 					<button

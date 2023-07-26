@@ -10,6 +10,12 @@ import orderpanel3 from "../assets/project-order-panel-images/orderpanel3.jpg";
 import orderpanel4 from "../assets/project-order-panel-images/orderpanel4.jpg";
 import orderpanellogo from "../assets/project-order-panel-images/orderpanellogo.jpg";
 
+import watchlist1 from "../assets/project-watchlist-images/watchlist1.jpg";
+import watchlist2 from "../assets/project-watchlist-images/watchlist2.jpg";
+import watchlist3 from "../assets/project-watchlist-images/watchlist3.jpg";
+import watchlist4 from "../assets/project-watchlist-images/watchlist4.jpg";
+import watchlistlogo from "../assets/project-watchlist-images/watchlistlogo.jpg";
+
 export const projectData = [
 	{
 		id: 0,
@@ -26,6 +32,14 @@ export const projectData = [
 		description:
 			"An app to help restaurant operator to deal with customer orders,complete functionality to CRUD a customer order, and count pricetotal of each order.",
 		image: [orderpanel1, orderpanel2, orderpanel3, orderpanel4],
+	},
+	{
+		id: 2,
+		title: "Movie Watchlist Tracker",
+		logo: watchlistlogo,
+		description:
+			"App that helps you keep track on what you have or have not watch. It can be movies, shows, etc.Data fetches using IMDb API, giving access to every movies or shows that ever exist.",
+		image: [watchlist1, watchlist2, watchlist3, watchlist4],
 	},
 ];
 // export const projectData = [

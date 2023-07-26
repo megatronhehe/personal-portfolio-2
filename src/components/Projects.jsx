@@ -5,9 +5,10 @@ import { projectData } from "../data/projectData";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-	const projectCardElement = projectData.map((project) => (
+	const projectCardElement = projectData.map((project, i) => (
 		<ProjectCard
 			key={project.id}
+			index={i}
 			title={project.title}
 			description={project.description}
 			image={project.image}
