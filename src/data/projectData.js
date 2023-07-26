@@ -2,16 +2,19 @@ import ecommerce1 from "../assets/project-ecommerce-images/ecommerce1.jpg";
 import ecommerce2 from "../assets/project-ecommerce-images/ecommerce2.jpg";
 import ecommerce3 from "../assets/project-ecommerce-images/ecommerce3.jpg";
 import ecommerce4 from "../assets/project-ecommerce-images/ecommerce4.jpg";
+import ecommercelogo from "../assets/project-ecommerce-images/ecommercelogo.jpg";
 
 import orderpanel1 from "../assets/project-order-panel-images/orderpanel1.jpg";
 import orderpanel2 from "../assets/project-order-panel-images/orderpanel2.jpg";
 import orderpanel3 from "../assets/project-order-panel-images/orderpanel3.jpg";
 import orderpanel4 from "../assets/project-order-panel-images/orderpanel4.jpg";
+import orderpanellogo from "../assets/project-order-panel-images/orderpanellogo.jpg";
 
 export const projectData = [
 	{
 		id: 0,
 		title: "E-Commerce Clothing Website",
+		logo: ecommercelogo,
 		description:
 			"An online clothing online shop complete with most of the actual online shop functionality like cart systems, ability to choose and pick color, and more.",
 		image: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
@@ -19,6 +22,7 @@ export const projectData = [
 	{
 		id: 1,
 		title: "Restaurant Ordering Panel App",
+		logo: orderpanellogo,
 		description:
 			"An app to help restaurant operator to deal with customer orders,complete functionality to CRUD a customer order, and count pricetotal of each order.",
 		image: [orderpanel1, orderpanel2, orderpanel3, orderpanel4],

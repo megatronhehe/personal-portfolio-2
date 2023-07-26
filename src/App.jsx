@@ -46,5 +46,10 @@ function App() {
 		</>
 	);
 }
+// <div className="fixed top-0 z-50 flex items-center justify-center w-full h-screen">
+// 	<div className="flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50">
+// 		<h1>modal here</h1>
+// 	</div>
+// </div>
 
 export default App;
