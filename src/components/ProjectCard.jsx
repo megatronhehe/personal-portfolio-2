@@ -7,64 +7,68 @@ import { LuFileCode, LuPlay, LuImage } from "react-icons/lu";
 
 const ProjectCard = ({ title, description, image, logo, index }) => {
 	const [toggleModal, setToggleModal] = useState(false);
+	const [isMouseEnter, setIsMouseEnter] = useState(false);
+
+	const mouseEnter = () => {
+		setIsMouseEnter(true);
+	};
+	const mouseLeave = () => {
+		setIsMouseEnter(false);
+	};
 
 	return (
 		<>
-			<p className="flex justify-center py-4 text-gray-600 border-b border-gray-600">
-				<PiDiamondsFourFill />
-			</p>
 			<div
-				className={`w-full gap-4 pb-16 my-16 text-gray-700 sm:h-80 sm:flex ${
-					index % 2 === 1 ? "flex-row-reverse" : ""
-				}`}
+				onMouseEnter={mouseEnter}
+				onMouseLeave={mouseLeave}
+				className="relative mb-4 md:mb-0"
 			>
-				<div className="relative flex flex-col items-center justify-center sm:w-2/4">
-					<img
-						src={logo}
-						alt=""
-						className="object-contain w-full h-80 rounded-2xl"
-					/>
-				</div>
+				<img src={logo} alt="" className="w-full" />
+				{isMouseEnter && (
+					<div className="absolute top-0 flex flex-col justify-around w-full h-full p-4 text-gray-200 bg-gray-700 bg-opacity-50 sm:p-8 backdrop-filter backdrop-blur-sm ">
+						<h2 className="font-semibold tracking-wide text-center">{title}</h2>
+						<p className="text-xs ">{description}</p>
 
-				<div className="flex flex-col justify-center py-4 sm:p-16 sm:w-2/4 rounded-xl">
-					<h1 className="my-3 text-base font-semibold text-green-400 ">
-						{title}
-					</h1>
-					<p className="text-gray-300">{description}</p>
+						<div className="flex justify-between">
+							<div className="flex flex-col w-2/3">
+								<p className="mb-4 font-semibold">Technologies used</p>
+								<ul className="text-xs">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JavaScript</li>
+									<li>React JS</li>
+									<li>Tailwind CSS</li>
+								</ul>
+							</div>
 
-					<div className="mt-4 text-green-400">
-						<p>Technologies Used : </p>
-						<ul className="flex gap-2 mt-2">
-							<li className="p-2 bg-gray-700 rounded-lg">React JS</li>
-							<li className="p-2 bg-gray-700 rounded-lg">Tailwind CSS</li>
-						</ul>
+							<div className="flex flex-col justify-end pl-4">
+								<p className="self-center mb-4 font-semibold">Try it out!</p>
+								<ul className="flex flex-col gap-2 text-xs">
+									<li
+										onClick={() => setToggleModal(true)}
+										className="flex items-center gap-2"
+									>
+										<LuImage className="p-2 text-4xl text-gray-400 bg-gray-200 rounded-full" />
+										<p>Image Preview</p>
+									</li>
+									<li className="flex items-center gap-2">
+										<LuPlay className="p-2 text-4xl text-white bg-red-400 rounded-full" />
+										<p>Live Demo</p>
+									</li>
+									<li className="flex items-center gap-2">
+										<LuFileCode className="p-2 text-4xl text-gray-200 bg-blue-400 rounded-full" />
+										<p>Source Code</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-
-					<div className="flex items-center self-end py-2 mt-2 text-center ">
-						<ul className="flex flex-col gap-2 text-2xl ">
-							<li
-								onClick={() => setToggleModal(true)}
-								className="flex items-center gap-2 px-2 py-1 text-gray-600 bg-gray-400 rounded-md jusity-center"
-							>
-								<LuImage />
-								<p className="text-xs">preview image</p>
-							</li>
-							<li className="flex items-center gap-2 px-2 py-1 bg-red-400 rounded-md jusity-center">
-								<LuPlay />
-								<p className="text-xs">live demo</p>
-							</li>
-							<li className="flex items-center gap-2 px-2 py-1 bg-blue-400 rounded-md jusity-center">
-								<LuFileCode />
-								<p className="text-xs">source code</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				{toggleModal && (
-					<ImageModal setToggleModal={setToggleModal} image={image} />
 				)}
 			</div>
+
+			{toggleModal && (
+				<ImageModal setToggleModal={setToggleModal} image={image} />
+			)}
 		</>
 	);
 };

@@ -22,7 +22,7 @@ const ImageModal = ({ setToggleModal, image }) => {
 	return (
 		<div
 			onClick={() => setToggleModal(false)}
-			className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-opacity-50 sm:p-24 backdrop-filter backdrop-blur-sm"
+			className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen text-white bg-opacity-50 sm:p-24 backdrop-filter backdrop-blur-sm"
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}
@@ -35,24 +35,35 @@ const ImageModal = ({ setToggleModal, image }) => {
 						alt=""
 					/>
 				</div>
+			</div>
 
-				<div className="absolute bottom-0 flex justify-between w-full h-full gap-4 p-2 text-xl text-white">
-					<button
-						onClick={prevImage}
-						className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
-					>
-						<LuChevronLeft />
-					</button>
-					<p className="self-end w-24 px-4 py-1 text-xs font-semibold tracking-widest text-center bg-gray-500 bg-opacity-50 rounded-full shadow-lg">
-						{currentImageIndex + 1}/{imageArray.length}
-					</p>
-					<button
-						onClick={nextImage}
-						className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
-					>
-						<LuChevronRight />
-					</button>
-				</div>
+			<div className="absolute left-2">
+				<button
+					onClick={(e) => {
+						e.stopPropagation();
+						prevImage();
+					}}
+					className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
+				>
+					<LuChevronLeft />
+				</button>
+			</div>
+			<div className="absolute right-2">
+				<button
+					onClick={(e) => {
+						e.stopPropagation();
+						nextImage();
+					}}
+					className="self-center p-2 text-2xl bg-gray-600 rounded-full bg-opacity-20 hover:bg-opacity-70"
+				>
+					<LuChevronRight />
+				</button>
+			</div>
+
+			<div className="absolute bottom-2">
+				<p className="self-end w-24 px-4 py-1 text-xs font-semibold tracking-widest text-center bg-gray-500 bg-opacity-50 rounded-full shadow-lg">
+					{currentImageIndex + 1}/{imageArray.length}
+				</p>
 			</div>
 		</div>
 	);

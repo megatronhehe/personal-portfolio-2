@@ -31,7 +31,7 @@ const Projects = () => {
 				</div>
 			</div>
 
-			<div>{projectCardElement}</div>
+			<div className="grid-cols-2 gap-4 md:grid">{projectCardElement}</div>
 		</div>
 	);
 };
