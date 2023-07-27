@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // import satya from "../assets/satyajpg.jpg";
 import satya from "../assets/satyajpg2.jpg";
@@ -8,10 +8,17 @@ import { ImProfile } from "react-icons/im";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Home = () => {
+	useEffect(() => {
+		const element = document.getElementById("home");
+		element.scrollIntoView({ behavior: "smooth" });
+	}, []);
+
 	return (
 		<div className="relative flex flex-col items-center justify-center h-screen gap-4 my-80 sm:flex-row">
 			<div className="flex flex-col items-center">
-				<h1 className="text-4xl tracking-wide text-red-400">Satya Mahendra</h1>
+				<h1 className="mt-32 text-4xl tracking-wide text-red-400 sm:mt-0">
+					Satya Mahendra
+				</h1>
 				<p className="flex items-center gap-2 mb-6 text-blue-400">
 					<PiDiamondsFourFill />
 					Frontend <span className="font-bold text-blue-300">React</span> Web
@@ -20,13 +27,13 @@ const Home = () => {
 				<img
 					src={satya}
 					alt="satya"
-					className="w-full border-2 border-gray-700 rounded-full shadow-xl"
+					className="w-full border-2 border-red-400 rounded-full shadow-xl"
 				/>
 			</div>
 			<div className="flex flex-col gap-4">
-				<PiDiamondsFourFill className="self-center text-gray-700" />
-				<div className="flex flex-col gap-6 p-12 border-gray-700 border-y">
-					<p className="text-gray-400">
+				<PiDiamondsFourFill className="self-center text-red-400" />
+				<div className="flex flex-col gap-6 p-4 border-red-400 border-y">
+					<p className="mb-8 text-gray-400">
 						A passionate frontend React web developer passionate on building
 						interactive and responsive web app.
 					</p>
@@ -46,7 +53,7 @@ const Home = () => {
 						</li>
 					</ul>
 				</div>
-				<PiDiamondsFourFill className="self-center text-gray-700" />
+				<PiDiamondsFourFill className="self-center text-red-400" />
 			</div>
 		</div>
 	);

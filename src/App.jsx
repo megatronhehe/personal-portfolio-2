@@ -12,7 +12,7 @@ function App() {
 	return (
 		<>
 			<div className="w-full px-6 bg-gray-800">
-				<div className="fixed z-50 lg:invisible top-2 left-2">
+				<div className="fixed bottom-0 left-0 z-50 lg:invisible">
 					<Navbar />
 				</div>
 				<div className="fixed top-0 left-0 z-50 invisible lg:visible">
