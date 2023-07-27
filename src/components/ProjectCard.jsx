@@ -4,27 +4,35 @@ import ImageModal from "./ImageModal";
 
 import { PiDiamondsFourFill } from "react-icons/pi";
 import { LuFileCode, LuPlay, LuImage } from "react-icons/lu";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const ProjectCard = ({ title, description, image, logo, index }) => {
 	const [toggleModal, setToggleModal] = useState(false);
-	const [isMouseEnter, setIsMouseEnter] = useState(false);
+	const [toggleInfo, setToggleInfo] = useState(false);
+	// const [isMouseEnter, setIsMouseEnter] = useState(false);
 
-	const mouseEnter = () => {
-		setIsMouseEnter(true);
-	};
-	const mouseLeave = () => {
-		setIsMouseEnter(false);
-	};
+	// const mouseEnter = () => {
+	// 	setIsMouseEnter(true);
+	// };
+	// const mouseLeave = () => {
+	// 	setIsMouseEnter(false);
+	// };
 
 	return (
 		<>
 			<div
-				onMouseEnter={mouseEnter}
-				onMouseLeave={mouseLeave}
+				// onMouseEnter={mouseEnter}
+				// onMouseLeave={mouseLeave}
 				className="relative mb-4 md:mb-0"
 			>
 				<img src={logo} alt="" className="w-full" />
-				{isMouseEnter && (
+				<button
+					onClick={() => setToggleInfo((prev) => !prev)}
+					className="absolute z-10 flex items-center justify-center w-10 h-10 text-4xl text-gray-700 bg-white bg-opacity-50 rounded-md top-3 right-3"
+				>
+					{toggleInfo ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+				</button>
+				{toggleInfo && (
 					<div className="absolute top-0 flex flex-col justify-around w-full h-full p-4 text-gray-200 bg-gray-700 bg-opacity-50 sm:p-8 backdrop-filter backdrop-blur-sm ">
 						<h2 className="font-semibold tracking-wide text-center">{title}</h2>
 						<p className="text-xs ">{description}</p>

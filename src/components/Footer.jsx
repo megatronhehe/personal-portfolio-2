@@ -17,14 +17,15 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-center gap-4 py-6 text-xs text-gray-600">
+		<div className="flex flex-col items-center gap-4 py-6 my-20 text-xs text-center text-gray-600">
 			<PiDiamondsFourFill onClick={getRandomQuote} />
-			<div>
-				<p>{quote.quote}</p>
-				<p className="text-center">- {quote.by}</p>
+			<div className="flex flex-col justify-between h-20">
+				<p className="mb-2">{quote.quote}</p>
+				<p>- {quote.by}</p>
 			</div>
 			<p className="pt-4 text-gray-600 border-t border-gray-600">
-				made with love by satya, not really.. but mostly with fingers{" "}
+				made by satya 2023 - powered by netlify - made using React JS + Tailwind
+				CSS
 			</p>
 		</div>
 	);
