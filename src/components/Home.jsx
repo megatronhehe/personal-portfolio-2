@@ -14,12 +14,12 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="relative flex flex-col items-center justify-center h-screen gap-4 my-80 sm:flex-row">
+		<div className="relative flex flex-col items-center justify-center h-screen gap-4 -mt-6 mb-80 sm:flex-row">
 			<div className="flex flex-col items-center">
-				<h1 className="mt-32 text-4xl tracking-wide text-red-400 sm:mt-0">
+				<h1 className="text-4xl tracking-wide text-red-400 sm:mt-0">
 					Satya Mahendra
 				</h1>
-				<p className="flex items-center gap-2 mb-6 text-blue-400">
+				<p className="flex items-center gap-2 mb-4 text-blue-400">
 					<PiDiamondsFourFill />
 					Frontend <span className="font-bold text-blue-300">React</span> Web
 					Developer
@@ -27,22 +27,25 @@ const Home = () => {
 				<img
 					src={satya}
 					alt="satya"
-					className="w-full border-2 border-red-400 rounded-full shadow-xl"
+					className="w-3/4 border-2 border-red-400 rounded-full shadow-xl"
 				/>
 			</div>
 			<div className="flex flex-col gap-4">
 				<PiDiamondsFourFill className="self-center text-red-400" />
-				<div className="flex flex-col gap-6 p-4 border-red-400 border-y">
-					<p className="mb-8 text-gray-400">
-						A passionate frontend React web developer passionate on building
-						interactive and responsive web app.
+				<div className="flex flex-col p-4 border-red-400 border-y">
+					<p className="mb-4 text-gray-300 ">
+						A passionate frontend{" "}
+						<span className="font-semibold text-blue-400">React</span> web
+						developer passionate on building{" "}
+						<span className="text-blue-400">interactive</span> and{" "}
+						<span className="text-blue-400">responsive web app</span>.
 					</p>
 					<ul className="flex justify-between gap-2 text-2xl">
 						<li className="flex gap-2">
-							<div className="p-2 text-blue-600 bg-white rounded-full">
+							<div className="p-2 text-red-400 bg-gray-700 rounded-full">
 								<FaLinkedin />
 							</div>
-							<div className="p-2 text-blue-600 bg-white rounded-full">
+							<div className="p-2 text-red-400 bg-gray-700 rounded-full">
 								<FaGithub />
 							</div>
 						</li>

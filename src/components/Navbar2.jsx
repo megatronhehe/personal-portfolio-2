@@ -5,10 +5,9 @@ import { PiDiamondsFourFill } from "react-icons/pi";
 
 const Navbar2 = () => {
 	const handleClickScroll = (section) => {
-		const element = document.getElementById(section);
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
-		}
+		const element = document
+			.getElementById(section)
+			.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
