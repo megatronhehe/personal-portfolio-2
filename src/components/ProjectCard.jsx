@@ -6,7 +6,7 @@ import { PiDiamondsFourFill } from "react-icons/pi";
 import { LuFileCode, LuPlay, LuImage } from "react-icons/lu";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
-const ProjectCard = ({ title, description, image, logo, index }) => {
+const ProjectCard = ({ title, description, image, logo, sc, index }) => {
 	const [toggleModal, setToggleModal] = useState(false);
 	const [toggleInfo, setToggleInfo] = useState(false);
 	// const [isMouseEnter, setIsMouseEnter] = useState(false);
@@ -54,19 +54,23 @@ const ProjectCard = ({ title, description, image, logo, index }) => {
 								<ul className="flex flex-col gap-2 text-xs">
 									<li
 										onClick={() => setToggleModal(true)}
-										className="flex items-center gap-2"
+										className="flex items-center gap-2 cursor-pointer"
 									>
-										<LuImage className="p-2 text-4xl text-gray-400 bg-gray-200 rounded-full" />
+										<LuImage className="w-10 h-10 p-2 text-4xl text-gray-400 bg-gray-200 rounded-full" />
 										<p>Image Preview</p>
 									</li>
 									<li className="flex items-center gap-2">
-										<LuPlay className="p-2 text-4xl text-white bg-red-400 rounded-full" />
+										<LuPlay className="w-10 h-10 p-2 text-4xl text-white bg-red-400 rounded-full" />
 										<p>Live Demo</p>
 									</li>
-									<li className="flex items-center gap-2">
-										<LuFileCode className="p-2 text-4xl text-gray-200 bg-blue-400 rounded-full" />
+									<a
+										href={sc}
+										target="_blank"
+										className="flex items-center gap-2 "
+									>
+										<LuFileCode className="w-10 h-10 p-2 text-4xl text-gray-200 bg-blue-400 rounded-full " />
 										<p>Source Code</p>
-									</li>
+									</a>
 								</ul>
 							</div>
 						</div>
