@@ -12,9 +12,14 @@ import {
 
 import { VscMail } from "react-icons/vsc";
 
-const Contact = () => {
+const Contact = ({ contacts }) => {
+	const { phone, email, linkedin, discord, instagram, github } = contacts;
+
 	return (
-		<div className="my-40 sm:h-screen sm:flex sm:flex-col sm:justify-center text-sm">
+		<div
+			id="contact"
+			className="my-40 text-sm sm:h-screen sm:flex sm:flex-col sm:justify-center"
+		>
 			<h1 className="pl-4 text-base text-purple-400 border-l-4 border-purple-400">
 				Contact
 			</h1>
@@ -26,41 +31,57 @@ const Contact = () => {
 			<div className="justify-around sm:flex">
 				<div className="px-2 mb-4 text-purple-400 border-l-2 border-purple-400">
 					<p className="font-semibold">General Contact</p>
-					<ul className="">
+					<ul className="flex flex-col gap-2 mt-2">
 						<li className="flex items-center gap-2">
 							<RiPhoneFill />
-							<p> (+62) 822 - 5410 - 3639</p>
+							<p>{phone}</p>
 						</li>
 						<li className="flex items-center gap-2">
 							<VscMail />
-							<p> satyamahendra09@gmail.com</p>
+							<p>{email}</p>
 						</li>
 					</ul>
 				</div>
 
 				<div className="px-2 text-purple-400 border-l-2 border-purple-400">
 					<p className="font-semibold">Social Media</p>
-					<ul className="">
-						<li className="flex items-center gap-2">
+					<ul className="flex flex-col gap-2 mt-2">
+						<a
+							href={linkedin.link}
+							target="_blank"
+							className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800"
+						>
 							<BsLinkedin />
-							<p> Ida Bagus Satya Mahendra</p>
-						</li>
-						<li className="flex items-center gap-2">
+							<p>{linkedin.name}</p>
+						</a>
+						<a
+							href={discord.link}
+							target="_blank"
+							className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800"
+						>
 							<BsDiscord />
-							<p>satyahehe</p>
-						</li>
-						<li className="flex items-center gap-2">
+							<p>{discord.name}</p>
+						</a>
+						<a
+							href={instagram.link}
+							target="_blank"
+							className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800"
+						>
 							<BsInstagram />
-							<p>007satya_</p>
-						</li>
-						<li className="flex items-center gap-2">
+							<p>{instagram.name}</p>
+						</a>
+						<li className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800">
 							<BsWhatsapp />
-							<p>(+62) 822 - 5410 - 3639</p>
+							<p>{phone}</p>
 						</li>
-						<li className="flex items-center gap-2">
+						<a
+							href={github.link}
+							target="_blank"
+							className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800"
+						>
 							<BsGithub />
-							<p>megatronhehe</p>
-						</li>
+							<p>{github.name}</p>
+						</a>
 					</ul>
 				</div>
 			</div>

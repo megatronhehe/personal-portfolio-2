@@ -11,7 +11,7 @@ const Navbar2 = () => {
 	};
 
 	return (
-		<div className="text-4xl text-red-400 ">
+		<div className="fixed top-0 left-0 z-50 invisible text-4xl text-red-400 lg:visible">
 			<ul className="flex flex-col items-center justify-center h-screen gap-12 px-4 pb-24 bg-gray-700 opacity-90 ">
 				<li className="flex flex-col items-center text-base text-gray-500 ">
 					<PiDiamondsFourFill />

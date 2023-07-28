@@ -17,7 +17,10 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-center gap-4 py-6 my-20 text-xs text-center text-gray-600">
+		<div
+			id="footer"
+			className="flex flex-col items-center gap-4 py-6 my-20 text-xs text-center text-gray-600"
+		>
 			<PiDiamondsFourFill onClick={getRandomQuote} />
 			<div className="flex flex-col justify-between h-20">
 				<p className="mb-2">{quote.quote}</p>

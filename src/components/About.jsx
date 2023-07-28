@@ -25,7 +25,7 @@ const About = () => {
 	const [toggle, setToggle] = useState(false);
 
 	return (
-		<div className="sm:h-screen sm:flex sm:items-center text-sm">
+		<div id="about" className="text-sm sm:h-screen sm:flex sm:items-center">
 			<div>
 				<h1 className="pl-4 text-base text-blue-400 border-l-4 border-blue-400">
 					about
