@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import waqr from "../assets/waqr.jpg";
 
 import { RiPhoneFill } from "react-icons/ri";
 
@@ -14,6 +16,8 @@ import { VscMail } from "react-icons/vsc";
 
 const Contact = ({ contacts }) => {
 	const { phone, email, linkedin, discord, instagram, github } = contacts;
+
+	const [toggleWA, setToggleWA] = useState(false);
 
 	return (
 		<div
@@ -70,10 +74,20 @@ const Contact = ({ contacts }) => {
 							<BsInstagram />
 							<p>{instagram.name}</p>
 						</a>
-						<li className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800">
+						<button
+							onClick={() => setToggleWA((prev) => !prev)}
+							className="relative flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-purple-400 hover:text-gray-800"
+						>
 							<BsWhatsapp />
 							<p>{phone}</p>
-						</li>
+							{toggleWA && (
+								<img
+									className="absolute w-2/3 top-2 right-2"
+									src={waqr}
+									alt=""
+								/>
+							)}
+						</button>
 						<a
 							href={github.link}
 							target="_blank"

@@ -40,7 +40,7 @@ const Projects = () => {
 				>
 					<IoInformationCircleSharp className="text-xl" />
 					{toggleInfo && (
-						<p className="absolute w-32 p-2 bg-gray-800 border border-gray-400 rounded-tl-xl rounded-b-xl right-4 top-4 bg-opacity-80 backdrop-filter backdrop-blur-sm">
+						<p className="absolute z-10 w-32 p-2 bg-gray-800 border border-gray-400 rounded-tl-xl rounded-b-xl right-2 top-2 bg-opacity-80 backdrop-filter backdrop-blur-sm">
 							if live demo is unavailable, it probably ran out of bandwith. try
 							preview images instead.
 						</p>
