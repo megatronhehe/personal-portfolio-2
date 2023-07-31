@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import satya from "../assets/satyajpg.jpg";
 import satya from "../assets/satyajpg2.jpg";
 
 import { PiDiamondsFourFill } from "react-icons/pi";
