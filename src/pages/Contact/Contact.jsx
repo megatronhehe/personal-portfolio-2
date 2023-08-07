@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
-import waqr from "../assets/waqr.jpg";
+import waqr from "../../assets/waqr.jpg";
 
 import { RiPhoneFill } from "react-icons/ri";
+
+import Section from "../../components/Section";
 
 import {
 	BsDiscord,
@@ -20,11 +22,8 @@ const Contact = ({ contacts }) => {
 	const [toggleWA, setToggleWA] = useState(false);
 
 	return (
-		<div
-			id="contact"
-			className="my-40 text-sm sm:h-screen sm:flex sm:flex-col sm:justify-center"
-		>
-			<h1 className="pl-4 text-base text-purple-400 border-l-4 border-purple-400">
+		<Section sectionName="contact">
+			<h1 className="pl-4 mt-4 text-2xl text-purple-400 border-l-4 border-purple-400">
 				Contact
 			</h1>
 
@@ -99,7 +98,7 @@ const Contact = ({ contacts }) => {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</Section>
 	);
 };
 

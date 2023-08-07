@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { quotesData } from "../data/data";
+import { quotesData } from "../../data/data";
 
 import { PiDiamondsFourFill } from "react-icons/pi";
 

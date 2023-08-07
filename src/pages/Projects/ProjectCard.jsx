@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ImageModal from "./ImageModal";
+import ImageModal from "../../components/ImageModal";
 
 import { LuFileCode, LuPlay, LuImage } from "react-icons/lu";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";

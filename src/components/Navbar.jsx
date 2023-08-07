@@ -21,7 +21,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className="fixed bottom-0 left-0 z-50 text-2xl text-red-400 lg:invisible">
+		<div className="fixed bottom-0 left-0 z-50 text-2xl text-red-400 xl:invisible">
 			{toggle && (
 				<div
 					onClick={() => setToggle(false)}
@@ -69,8 +69,11 @@ const Navbar = () => {
 				</div>
 			)}
 			<div className="flex justify-between w-screen px-8 py-4 bg-gray-700 bg-opacity-80 backdrop-filter backdrop-blur-sm">
-				<h1 onClick={() => handleClickScroll("home")} className="text-base">
-					satya.dev
+				<h1
+					onClick={() => handleClickScroll("home")}
+					className="text-base text-gray-400"
+				>
+					satya.<span className="font-bold text-red-400">dev</span>
 				</h1>
 				<button onClick={() => setToggle((prev) => !prev)} className="">
 					<VscThreeBars />
