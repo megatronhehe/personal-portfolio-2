@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import DotaIcon from "../../assets/icons/dotaicon";
+import DotaIcon from "../../assets/icons/DotaIcon";
 
 import {
 	PiAddressBookBold,
