@@ -23,7 +23,7 @@ const TechStacks = () => {
 	};
 
 	return (
-		<div className="mt-4 ">
+		<div className="mt-8">
 			<h2 className="flex items-center justify-center gap-2 pb-2 mb-2 text-base font-semibold text-center text-blue-400 border-b border-blue-400">
 				<PiCubeBold />
 				Tech Stacks

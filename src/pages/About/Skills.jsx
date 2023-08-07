@@ -16,19 +16,8 @@ import { TbHeartHandshake } from "react-icons/tb";
 import { HiUserGroup, HiUser } from "react-icons/hi2";
 
 const Skills = () => {
-	const Card = ({ tech, icon, color }) => {
-		return (
-			<li
-				className={`flex flex-col items-center justify-center font-semibold flex-grow gap-2 tracking-wide rounded-md p-2 bg-gray-700 ${color}`}
-			>
-				<div className="text-4xl">{icon}</div>
-				{tech}
-			</li>
-		);
-	};
-
 	return (
-		<div className="mt-4 ">
+		<div className="mt-8 ">
 			<h2 className="flex items-center justify-center gap-2 pb-2 mb-2 text-base font-semibold text-center text-blue-400 border-b border-blue-400">
 				<IoBulbOutline />
 				Skills
