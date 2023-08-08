@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
@@ -20,7 +21,10 @@ const ImageModal = ({ setToggleModal, image }) => {
 	};
 
 	return (
-		<div
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 			onClick={() => setToggleModal(false)}
 			className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-screen text-white bg-opacity-50 sm:p-24 backdrop-filter backdrop-blur-sm"
 		>
@@ -65,7 +69,7 @@ const ImageModal = ({ setToggleModal, image }) => {
 					{currentImageIndex + 1}/{imageArray.length}
 				</p>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

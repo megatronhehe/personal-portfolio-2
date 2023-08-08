@@ -1,10 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section = ({ children, sectionName }) => {
 	return (
-		<div id={sectionName} className="pb-56 sm:pt-56">
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true }}
+			id={sectionName}
+			className="pb-56 sm:pt-56"
+		>
 			{children}
-		</div>
+		</motion.div>
 	);
 };
 

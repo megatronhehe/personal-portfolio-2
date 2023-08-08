@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { quotesData } from "../../data/data";
 
 import { PiDiamondsFourFill } from "react-icons/pi";
 
 const Footer = () => {
-	const [quote, setQuote] = useState([]);
+	const [quote, setQuote] = useState({});
 
 	const getRandomQuote = () => {
 		const randomNumber = Math.floor(Math.random() * quotesData.length);
@@ -23,7 +24,17 @@ const Footer = () => {
 		>
 			<PiDiamondsFourFill onClick={getRandomQuote} />
 			<div className="flex flex-col justify-between h-20">
-				<p className="mb-2">{quote.quote}</p>
+				<AnimatePresence mode="wait">
+					<motion.p
+						key={quote.quote}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="mb-2"
+					>
+						{quote.quote}
+					</motion.p>
+				</AnimatePresence>
 				<p>- {quote.by}</p>
 			</div>
 			<p className="pt-4 text-gray-600 border-t border-gray-600">
