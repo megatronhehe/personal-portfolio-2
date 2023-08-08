@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { projectData } from "../../data/projectData";
 
@@ -36,18 +37,25 @@ const Projects = ({ contacts }) => {
 							own everything. Here are a few of my featured projects.
 						</p>
 					</div>
-					<button
+					<motion.button
 						onClick={() => setToggleInfo((prev) => !prev)}
 						className="absolute top-0 right-0 flex items-center gap-2 mb-4 text-xs text-gray-400"
 					>
 						<IoInformationCircleSharp className="text-xl" />
-						{toggleInfo && (
-							<p className="absolute z-10 w-32 p-2 bg-gray-800 border border-gray-400 rounded-tl-xl rounded-b-xl right-2 top-2 bg-opacity-80 backdrop-filter backdrop-blur-sm">
-								if live demo is unavailable, it probably ran out of bandwith.
-								try preview images instead.
-							</p>
-						)}
-					</button>
+						<AnimatePresence>
+							{toggleInfo && (
+								<motion.p
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									className="absolute z-10 w-32 p-2 bg-gray-800 border border-gray-400 rounded-tl-xl rounded-b-xl right-2 top-2 bg-opacity-80 backdrop-filter backdrop-blur-sm"
+								>
+									if live demo is unavailable, it probably ran out of bandwith.
+									try preview images instead.
+								</motion.p>
+							)}
+						</AnimatePresence>
+					</motion.button>
 				</div>
 
 				<div className="grid-cols-2 gap-4 md:grid">{projectCardElement}</div>

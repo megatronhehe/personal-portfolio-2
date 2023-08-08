@@ -14,12 +14,13 @@ const ProjectCard = ({ title, description, image, logo, sc, index }) => {
 		<>
 			<div className="relative mb-4 md:mb-0">
 				<img src={logo} alt="" className="w-full" />
-				<button
+				<motion.button
+					whileHover={{ scale: 1.2 }}
 					onClick={() => setToggleInfo((prev) => !prev)}
 					className="absolute z-10 flex items-center justify-center w-10 h-10 text-4xl text-gray-700 bg-white bg-opacity-50 rounded-md top-3 right-3"
 				>
 					{toggleInfo ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-				</button>
+				</motion.button>
 
 				<AnimatePresence>
 					{toggleInfo && (
@@ -27,12 +28,12 @@ const ProjectCard = ({ title, description, image, logo, sc, index }) => {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0 }}
-							className="absolute top-0 flex flex-col justify-around w-full h-full p-4 text-gray-200 bg-gray-700 bg-opacity-50 sm:p-8 backdrop-filter backdrop-blur-sm "
+							className="absolute top-0 flex flex-col justify-around w-full h-full p-4 text-gray-200 bg-gray-700 bg-opacity-80 sm:p-8 backdrop-filter backdrop-blur-sm "
 						>
 							<h2 className="font-semibold tracking-wide text-center">
 								{title}
 							</h2>
-							<p className="text-base md:text-sm ">{description}</p>
+							<p className="text-sm">{description}</p>
 
 							<div className="flex justify-between">
 								<div className="flex flex-col w-1/2">

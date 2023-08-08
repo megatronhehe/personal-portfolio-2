@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { motion } from "framer-motion";
+
 import Section from "../../components/Section";
 
 import satya from "../../assets/satyajpg2.jpg";
@@ -44,33 +46,36 @@ const Home = ({ contacts }) => {
 							<span className="text-blue-400">interactive</span> and{" "}
 							<span className="text-blue-400">responsive web app</span>.
 						</p>
-						<ul className="flex justify-between gap-2 text-2xl">
-							<li className="flex gap-2">
-								<a
+						<div className="flex justify-between gap-2 text-2xl">
+							<div className="flex gap-2">
+								<motion.a
+									whileHover={{ y: -3 }}
 									href={linkedin.link}
 									target="_blank"
 									className="p-2 text-gray-300 bg-gray-700 border border-gray-300 rounded-full"
 								>
 									<FaLinkedin />
-								</a>
-								<a
+								</motion.a>
+								<motion.a
+									whileHover={{ y: -3 }}
 									href={github.link}
 									target="_blank"
 									className="p-2 text-gray-200 bg-gray-700 border border-gray-300 rounded-full"
 								>
 									<FaGithub />
-								</a>
-							</li>
+								</motion.a>
+							</div>
 
-							<a
+							<motion.a
+								whileHover={{ y: -3 }}
 								href={resume}
 								target="_blank"
 								className="flex items-center gap-2 p-2 font-semibold text-gray-700 bg-red-400 rounded-md"
 							>
 								<p className="text-sm">résumé</p>
 								<ImProfile />
-							</a>
-						</ul>
+							</motion.a>
+						</div>
 					</div>
 					<PiDiamondsFourFill className="self-center text-red-400" />
 				</div>
